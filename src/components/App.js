@@ -6,6 +6,8 @@ import Logo from './Logo';
 
 const API_URL = 'https://app.joindrover.com/api/web/vehicles';
 
+const columnStyle = { display: 'inline-block', width: '50%', 'vertical-align': 'top' };
+
 class App extends Component {
   constructor() {
     super();
@@ -36,7 +38,7 @@ class App extends Component {
       noResults: false
     };
 
-    this.handleChange = this.handleChange.bind(this);
+    this.handleChange = this.handleChange.bind(this); // why to do .bind in react
     this.handleSlider = this.handleSlider.bind(this);
   }
 
@@ -46,9 +48,17 @@ class App extends Component {
 
   areParamsValid() {
     const state = this.state.params;
-    if(
-      (state.start_date.length && state.location.length && state.max_distance.toString().length && state.transmission.length && state.vehicle_make.length && state.fuel.length && state.tags.length && state.year.toString().length) > 0){
-    return true}
+
+    if((state.start_date.length &&
+        state.location.length &&
+        state.max_distance.toString().length &&
+        state.transmission.length &&
+        state.vehicle_make.length &&
+        state.fuel.length &&
+        state.tags.length &&
+        state.year.toString().length) > 0){
+      return true;
+    }
   }
 
   distill(data){
@@ -94,16 +104,14 @@ class App extends Component {
     }
   }
 
-  results(boolean) {
-    if(boolean === true){this.setState({
-      noResults: true
-    })} else {this.setState({
-      noResults: false
-    })}
+  results(areResultsPresent) {
+    this.setState({
+      noResults: areResultsPresent,
+    });
   }
 
   handleChange(event) {
-    const { name, value } = event.target;
+    const { name, value } = event.target; // object destructuring
     const params = this.state.params;
 
     if(name === "max_distance") {
@@ -132,6 +140,11 @@ class App extends Component {
     this.setState({params}, this.getData());
   }
 
+  handleSelectChange(event) {
+    debugger;
+    console.log(event);
+  }
+
   render() {
     const {params} = this.state;
     if (this.state.noResults === false && this.state.results.length < 1) {
@@ -140,13 +153,19 @@ class App extends Component {
 
     const resultsArray = [];
     if(this.state.noResults === false){
-      for (let i = 0; i < 14; i++) {
+      const cap = this.state.results.length < 14 ? this.state.results.length : 14;
+
+      for (let i = 0; i < cap; i++) {
+        const image = this.state.results[i].images.find(i => i.position === 0);
+        const otherImages = this.state.results[i].images.sort((a, b) => a.position - b.position).slice(1, 4);
+
         resultsArray.push(
           <Results
             vehicleMake={this.state.results[i].vehicle_make}
             vehicleModel={this.state.results[i].vehicle_model}
             postcode={this.state.results[i].postcode}
-            mainImage={this.state.results[i].images[1].main_image_url}
+            mainImage={image.main_image_url}
+
             features={this.state.results[i].features} // only take a maximum of 4 features
             fuel={this.state.results[i].fuel}
             seats={this.state.results[i].number_seats_information}
@@ -158,11 +177,14 @@ class App extends Component {
     }
 
   return (
-      <div>
+    <div>
+      <div style={columnStyle}>
         <Logo
           title={"Drover"}/>
+        <form>
         <TextInputBox
           eventHandler={this.handleChange}
+          handleSelectChange={this.handleSelectChange}
           name={"start_date"}
           title={"Subscription Start"}
           value={params.start_date}
@@ -225,12 +247,14 @@ class App extends Component {
           value={params.tags}
           type={"text"}
         />
-
+        </form>
+      </div>
+      <div style={columnStyle}>
         {resultsArray.map(results => {
             return (results)
           })}
-
       </div>
+    </div>
     )
   }
 }

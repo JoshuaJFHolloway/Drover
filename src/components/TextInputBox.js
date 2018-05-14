@@ -5,10 +5,12 @@ import TextInput from "./TextInput";
 const wrapperStyle = { width: 150, margin: 20 };
 
 const TextInputBox = (props) => {
+
+
     return (
       <div style={wrapperStyle}>
         <Header title={props.title}/>
-        <TextInput value={props.value} type={props.type} name={props.name} placeholder={props.placeholder} eventHandler={props.eventHandler}/>
+        <TextInput handleSelectChange={props.handleSelectChange} value={props.value} type={props.type} name={props.name} placeholder={props.placeholder} eventHandler={props.eventHandler}/>
       </div>
     );
 };

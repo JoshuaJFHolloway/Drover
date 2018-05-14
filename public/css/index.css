@@ -1,0 +1,13 @@
+html, body {
+  /* background */
+  background-color: #f5f5f5;
+  /* background positioning */
+  height: 100vh;
+  margin: 35px;
+  /* font style */
+  text-align: left;
+  /* font & browser compatibility */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+

@@ -131,6 +131,16 @@ Apart from fixing the aforementioned bugs:
 
 ## Screenshots of use!
 
+Below you can see a screenshot of the application once loaded. The left hand side are the spec inputs and the right
+hand side updates accordingly. There is still a lot of formatting I would like to get done especially on the strings
+that accompany each image.
+
+<a href="https://ibb.co/gs3ZBJ"><img src="https://preview.ibb.co/eKT1rJ/Screen_Shot_2018_05_15_at_13_13_45.png" alt="Screen_Shot_2018_05_15_at_13_13_45" border="0"></a>
+
+
+
+
+
 
 ## Contributors
 

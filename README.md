@@ -1,16 +1,17 @@
 # Drover Assignment
 
-My task was to build their Search Page.
+**My task was to build their Search Page**
 
 The page can be found at https://www.joindrover.com/cars/search and there are 2 versions of it (Consumer, Private-Hire) with very small differences between the two.
 
 
-What did they expect from me?
+**What did they expect from me?**
 
 Using https://github.com/facebook/create-react-app as a boilerplate (or any other you might prefer) try and get as much done as possible.
 
 We know people have different amounts of time to do this test so we have broken it down into sections based on amount of time you have. Please try and do as much as possible but if you only have time for one section we understand, of course, the more you do the better an idea we have of your skills.
-1. Basic
+
+1. **Basic**
 
     Setup an app that calls our API to get vehicles for one vehicle type
     Display vehicles in a list/table to the user with relevant data (eg: make, model, year, color, price - see notes)
@@ -18,7 +19,7 @@ We know people have different amounts of time to do this test so we have broken 
 
 Bonus: add some styling
 
-2. Keep going
+2. **Keep going**
 
     Add all fields able to search by for one vehicle type (please see live website)
     Write unit/snapshot tests for most if not all components
@@ -26,7 +27,7 @@ Bonus: add some styling
 
 Bonus: add functionality for pagination
 
-3. All out!
+3. **All out!**
 
     Search can search for both types of vehicles (Consumer & Private-Hire aka PCO)
     Unless already done, Pagination!!
@@ -48,9 +49,9 @@ ReactJS
 
 ## Usage
 
-- run 'npm install'
-- run 'npm start'
-- visit 'localhost:3000' in your browser to see the app
+- Run 'npm install'
+- Run 'npm start'
+- Visit 'localhost:3000' in your browser to see the app
 
 
 ## Approach
@@ -78,9 +79,9 @@ while still abiding to the SRP.
 #### General 
 
 I did not have enough time to make it bug free. Async JS is the crux of the issue. There are some occasions
-where the app will crash because it checks the if statements before the API has been called. This is something
-I wanted to fix. I just need to make sure the code runs the API first and before anything else and that would solve
-the issue. Knowing the best react way to do this would be really helpful
+where the app will crash because it checks 'if' statements before the API has been called. This is something
+I will fix. I just need to make sure the code runs the API first and before anything else and that would solve
+the issue. Knowing the best react way to do this would be really helpful.
 
 #### Tags
 
@@ -126,7 +127,7 @@ Apart from fixing the aforementioned bugs:
 6. I was also very aware of the fact that the images changed pattern often. It meant that there wasn't one consistent
    placement of the image used to advertise the cars. Which meant that I ended up sometimes having pictures of the cars
    which were internal or of the rear when they should be the front. This happened rarely with the pictures but it is still
-   something thats important to fix. 
+   something that's important to fix. 
 
 
 ## Screenshots of use!
@@ -136,10 +137,6 @@ hand side updates accordingly. There is still a lot of formatting I would like t
 that accompany each image.
 
 <a href="https://ibb.co/gs3ZBJ"><img src="https://preview.ibb.co/eKT1rJ/Screen_Shot_2018_05_15_at_13_13_45.png" alt="Screen_Shot_2018_05_15_at_13_13_45" border="0"></a>
-
-
-
-
 
 
 ## Contributors

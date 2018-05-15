@@ -141,4 +141,4 @@ that accompany each image.
 
 ## Contributors
 
-- Joshua Holloway
+Joshua Holloway

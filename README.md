@@ -78,10 +78,7 @@ while still abiding to the SRP.
 
 #### General 
 
-I did not have enough time to make it bug free. Async JS is the crux of the issue. There are some occasions
-where the app will crash because it checks 'if' statements before the API has been called. This is something
-I will fix. I just need to make sure the code runs the API first and before anything else and that would solve
-the issue. Knowing the best react way to do this would be really helpful.
+I did not have enough time to make it bug free. Async JS is the crux of the issue. Knowing the best react way to do this would be really helpful.
 
 #### Tags
 
@@ -109,9 +106,9 @@ Apart from fixing the aforementioned bugs:
 
 1. I would like to style the code a lot better. The time I spent on the
    test was mostly on the Api, the logic behind the code and the structure. Replicating the layout of the
-   search page would be one of my priorities and I am going to do this over the next few days. The styling was hurried.
+   search page would be one of my priorities and I am going to do this over the next few days.
 
-2. Add the last few features that make up the page. For example the buttons and grid layout. 
+2. Add the last few features that make up the page. For example the buttons. 
 
 3. Make the components more re-usable. I would have separated out some code more if I had the time. Take the
    price outside of the header component etc. 
@@ -124,10 +121,10 @@ Apart from fixing the aforementioned bugs:
    
 5. Complete the rest of the tasks that make up the 2nd and 3rd stages as part of the challenge. 
 
-6. I was also very aware of the fact that the images changed pattern often. It meant that there wasn't one consistent
+6. ~~I was also very aware of the fact that the images changed pattern often. It meant that there wasn't one consistent
    placement of the image used to advertise the cars. Which meant that I ended up sometimes having pictures of the cars
    which were internal or of the rear when they should be the front. This happened rarely with the pictures but it is still
-   something that's important to fix. 
+   something that's important to fix.~~ Fixed !
 
 
 ## Screenshots of use!

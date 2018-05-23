@@ -250,9 +250,7 @@ class App extends Component {
         </form>
       </div>
       <div style={columnStyle}>
-        {resultsArray.map(results => {
-            return (results)
-          })}
+        {resultsArray}
       </div>
     </div>
     )

@@ -38,7 +38,7 @@ class App extends Component {
       noResults: false
     };
 
-    this.handleChange = this.handleChange.bind(this); // why to do .bind in react
+    this.handleChange = this.handleChange.bind(this);
     this.handleSlider = this.handleSlider.bind(this);
   }
 
@@ -111,7 +111,7 @@ class App extends Component {
   }
 
   handleChange(event) {
-    const { name, value } = event.target; // object destructuring
+    const { name, value } = event.target;
     const params = this.state.params;
 
     if(name === "max_distance") {

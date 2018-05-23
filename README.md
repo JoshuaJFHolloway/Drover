@@ -53,6 +53,10 @@ ReactJS
 - Run 'npm start'
 - Visit 'localhost:3000' in your browser to see the app
 
+Once in the app, enter in to the inputs on the left hand side the specifications and see the cars
+available appear on the right hand side! Once the screenshot at the end of the Readme is viewed
+the way in which you do this is quite clear.
+
 
 ## Approach
 
@@ -74,11 +78,7 @@ I was also aware of not writing out multiple event handlers when I can mould one
 while still abiding to the SRP. 
 
 
-## Bugs
-
-#### General 
-
-I did not have enough time to make it bug free. Async JS is the crux of the issue. Knowing the best react way to do this would be really helpful.
+## Incompletions
 
 #### Tags
 

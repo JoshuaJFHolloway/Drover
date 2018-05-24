@@ -14,7 +14,15 @@ class App extends Component {
 
     this.state = {
       params: {
+        start_date: new Date(Date.now()).toLocaleString().slice(0, -10),
+        location: 'London, UK',
         max_distance: 50,
+        vehicle_make: "Any",
+        transmission: "Any",
+        year: "Any", // integer
+        fuel: "Any",
+        tags: "Any", // array
+
         number_of_months: 12,
         number_of_weeks: 52,
         order_by: "price",
@@ -24,15 +32,7 @@ class App extends Component {
         price_max: 2500,
         price_min :100,
         rolling: false,
-        start_date: new Date(Date.now()).toLocaleString().slice(0, -10),
-        vehicle_make: "Any",
-        transmission: "Any",
-        year: "Any", // integer
-        fuel: "Any",
-        tags: "Any", // array
-
         vehicle_type: 'Consumer',
-        location: 'London, UK',
       },
       results: [],
       noResults: false
@@ -140,40 +140,66 @@ class App extends Component {
     this.setState({params}, this.getData());
   }
 
-  handleSelectChange(event) {
-    debugger;
-    console.log(event);
+  // handleSelectChange(event) {
+  //   debugger;
+  //   console.log(event);
+  // }
+
+  capitalize(word) {
+    return word.charAt(0).toUpperCase() + word.substr(1);
   }
 
   render() {
     const {params} = this.state;
-    if (this.state.noResults === false && this.state.results.length < 1) {
+    const {results} = this.state;
+    const {noResults} = this.state;
+    const resultsArray = [];
+
+    if (noResults === false && results.length < 1) {
       return <span>Loading Cars...</span>
     }
 
-    const resultsArray = [];
-    if(this.state.noResults === false){
-      const cap = this.state.results.length < 14 ? this.state.results.length : 14;
+    if(noResults === false){
+      const cap = results.length < 14 ? results.length : 14;
 
       for (let i = 0; i < cap; i++) {
-        const image = this.state.results[i].images.find(i => i.position === 0);
-        const otherImages = this.state.results[i].images.sort((a, b) => a.position - b.position).slice(1, 4);
+        const image = results[i].images.find(i => i.position === 0);
+        const otherImages = results[i].images.sort((a, b) => a.position - b.position).slice(1, 4);
 
         resultsArray.push(
           <Results
-            vehicleMake={this.state.results[i].vehicle_make}
-            vehicleModel={this.state.results[i].vehicle_model}
-            postcode={this.state.results[i].postcode}
+            vehicleMake={results[i].vehicle_make}
+            vehicleModel={results[i].vehicle_model}
+            postcode={results[i].postcode}
             mainImage={image.main_image_url}
 
-            features={this.state.results[i].features} // only take a maximum of 4 features
-            fuel={this.state.results[i].fuel}
-            seats={this.state.results[i].number_seats_information}
-            engineSize={this.state.results[i].engine_size_information}
-            price={this.state.results[i].price_discount_and_deposit_schedule_hash[1].driver_price_pounds_after_discount_including_insurance}
+            features={results[i].features} // only take a maximum of 4 features
+            fuel={results[i].fuel}
+            seats={results[i].number_seats_information}
+            engineSize={results[i].engine_size_information}
+            price={results[i].price_discount_and_deposit_schedule_hash[1].driver_price_pounds_after_discount_including_insurance}
           />
         )
       }
+    }
+
+    const keys = Object.keys(this.state.params);
+    const values = Object.values(this.state.params);
+    const textInputs = [];
+    const titles = ['Subscription Start', this.capitalize(keys[1]), 'Distance (radius in miles)', 'Vehicle Make', 'Gear Box', this.capitalize(keys[5]), this.capitalize(keys[6]), this.capitalize(keys[7])];
+    const placeholder = [null, 'Enter your location', null, null, null, null, null, null];
+
+    for (let i = 0; i < 8; i++ ) {
+      textInputs.push(
+        <TextInputBox
+          eventHandler={this.handleChange}
+          name={keys[i]}
+          title={titles[i]}
+          value={values[i]}
+          type={'text'}
+          placeholder={placeholder[i]}
+        />
+      )
     }
 
   return (
@@ -184,7 +210,7 @@ class App extends Component {
         <form>
         <TextInputBox
           eventHandler={this.handleChange}
-          handleSelectChange={this.handleSelectChange}
+          // handleSelectChange={this.handleSelectChange}
           name={"start_date"}
           title={"Subscription Start"}
           value={params.start_date}
@@ -209,8 +235,8 @@ class App extends Component {
           eventHandler={this.handleSlider}
           title={"Monthly Budget"}
           value= {params.location}
-          min= {this.state.params.price_min}
-          max= {this.state.params.price_max}
+          min= {params.price_min}
+          max= {params.price_max}
         />
         <TextInputBox
           eventHandler={this.handleChange}
@@ -251,6 +277,8 @@ class App extends Component {
       </div>
       <div style={columnStyle}>
         {resultsArray}
+        {'Hello world'}
+        {textInputs}
       </div>
     </div>
     )

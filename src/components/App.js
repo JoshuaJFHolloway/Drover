@@ -114,18 +114,18 @@ class App extends Component {
     const { name, value } = event.target;
     const params = this.state.params;
 
-    if(name === "max_distance") {
+    if(name === "max_distance" || "year") {
       params[name]= parseInt(value);
     }
-    if(name === "year") {
-      params[name]= parseInt(value);
-    }
+
     // if(event.target.name === "tags"){
     //   params[name]= [event.target.value];
     // }
+
     else {
       params[name] = value;
     }
+
     this.setState({params}, this.getData())
   }
 

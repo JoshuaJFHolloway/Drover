@@ -18,10 +18,12 @@ class App extends Component {
         location: 'London, UK',
         max_distance: 50,
         vehicle_make: "Any",
+        price_min :100,
         transmission: "Any",
         year: "Any", // integer
         fuel: "Any",
         tags: "Any", // array
+        price_max: 2500,
 
         number_of_months: 12,
         number_of_weeks: 52,
@@ -29,8 +31,6 @@ class App extends Component {
         order_direction: "asc",
         page: 1,
         per_page: 15,
-        price_max: 2500,
-        price_min :100,
         rolling: false,
         vehicle_type: 'Consumer',
       },
@@ -150,9 +150,7 @@ class App extends Component {
   }
 
   render() {
-    const {params} = this.state;
-    const {results} = this.state;
-    const {noResults} = this.state;
+    const {params, results, noResults} = this.state;
     const resultsArray = [];
 
     if (noResults === false && results.length < 1) {
@@ -185,20 +183,33 @@ class App extends Component {
 
     const keys = Object.keys(this.state.params);
     const values = Object.values(this.state.params);
-    const textInputs = [];
-    const titles = ['Subscription Start', this.capitalize(keys[1]), 'Distance (radius in miles)', 'Vehicle Make', 'Gear Box', this.capitalize(keys[5]), this.capitalize(keys[6]), this.capitalize(keys[7])];
+    const titles = ['Subscription Start', this.capitalize(keys[1]), 'Distance (radius in miles)', 'Vehicle Make', 'Monthly Budget', 'Gear Box', this.capitalize(keys[6]), this.capitalize(keys[7]).concat(' Type'), 'Car Type'];
     const placeholder = [null, 'Enter your location', null, null, null, null, null, null];
+    const type = ['text', 'text', 'number', 'text', null, 'text', 'number', 'text', 'text'];
+    const textInputs = [];
 
-    for (let i = 0; i < 8; i++ ) {
-      textInputs.push(
-        <TextInputBox
-          eventHandler={this.handleChange}
-          name={keys[i]}
-          title={titles[i]}
-          value={values[i]}
-          type={'text'}
-          placeholder={placeholder[i]}
-        />
+    for (let i = 0; i < 9; i++) {
+      if (i === 4) {
+        textInputs.push(
+          <ScaleInputBox
+            eventHandler={this.handleSlider}
+            title={titles[i]}
+            min={values[i]}
+            max={values[9]}
+          />
+        )
+      }
+      else (
+        textInputs.push(
+          <TextInputBox
+            eventHandler={this.handleChange}
+            name={keys[i]}
+            title={titles[i]}
+            value={values[i]}
+            type={type[i]}
+            placeholder={placeholder[i]}
+          />
+        )
       )
     }
 
@@ -208,77 +219,11 @@ class App extends Component {
         <Logo
           title={"Drover"}/>
         <form>
-        <TextInputBox
-          eventHandler={this.handleChange}
-          // handleSelectChange={this.handleSelectChange}
-          name={"start_date"}
-          title={"Subscription Start"}
-          value={params.start_date}
-          type={"text"}
-        />
-        <TextInputBox
-          eventHandler={this.handleChange}
-          name={"location"}
-          placeholder={"Enter your location"}
-          title={"Location"}
-          value={params.location}
-          type={"text"}
-        />
-        <TextInputBox
-          eventHandler={this.handleChange}
-          name={"max_distance"}
-          title={"Distance (radius in miles)"}
-          value={params.max_distance}
-          type={"number"}
-        />
-        <ScaleInputBox
-          eventHandler={this.handleSlider}
-          title={"Monthly Budget"}
-          value= {params.location}
-          min= {params.price_min}
-          max= {params.price_max}
-        />
-        <TextInputBox
-          eventHandler={this.handleChange}
-          name={"vehicle_make"}
-          title={"Vehicle Make"}
-          value={params.vehicle_make}
-          type={"text"}
-        />
-        <TextInputBox
-          eventHandler={this.handleChange}
-          name={"transmission"}
-          title={"Gear Box"}
-          value={params.transmission}
-          type={"text"}
-        />
-        <TextInputBox
-          eventHandler={this.handleChange}
-          name={"year"}
-          title={"Year"}
-          value={params.year}
-          type={"number"}
-        />
-        <TextInputBox
-          eventHandler={this.handleChange}
-          name={"fuel"}
-          title={"Fuel Type"}
-          value={params.fuel}
-          type={"text"}
-        />
-        <TextInputBox
-          eventHandler={this.handleChange}
-          name={"tags"}
-          title={"Car Type"}
-          value={params.tags}
-          type={"text"}
-        />
+          {textInputs}
         </form>
       </div>
       <div style={columnStyle}>
         {resultsArray}
-        {'Hello world'}
-        {textInputs}
       </div>
     </div>
     )

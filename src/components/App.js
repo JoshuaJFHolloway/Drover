@@ -116,20 +116,17 @@ class App extends Component {
 
     if(name === "max_distance") {
       params[name]= parseInt(value);
-      this.setState({params}, this.getData());
     }
     if(name === "year") {
       params[name]= parseInt(value);
-      this.setState({params}, this.getData());
     }
     // if(event.target.name === "tags"){
     //   params[name]= [event.target.value];
-    //   this.setState({params}, this.getData());
     // }
     else {
       params[name] = value;
-      this.setState({params}, this.getData());
     }
+    this.setState({params}, this.getData())
   }
 
   handleSlider(event) {

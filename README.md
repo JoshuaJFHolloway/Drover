@@ -1,5 +1,17 @@
 # Drover Assignment
 
+**Disclaimer**
+
+Since creating Drover's search page, it has been updated on their end and therefore the format is no longer
+akin to what I have created. Updates such as the order of the inputs being re-organised and the pictures now having a scroll
+feature.
+
+On top of this they have changed the specifications of their API. Changes like the subscription date now
+being an integer and not a string means that my project now is submitting incorrect params. I will be looking
+to update this so that it once again has functionality asap. But if this repo once pulled down seems to
+not be functional with the API then you know why.
+
+
 **My task was to build their Search Page**
 
 The page can be found at https://www.joindrover.com/cars/search and there are 2 versions of it (Consumer, Private-Hire) with very small differences between the two.

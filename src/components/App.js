@@ -14,7 +14,7 @@ class App extends Component {
 
     this.state = {
       params: {
-        start_date: new Date(Date.now()).toLocaleString().slice(0, -10),
+        subscription_start_days: 30,
         location: 'London, UK',
         max_distance: 50,
         vehicle_make: "Any",
@@ -49,7 +49,7 @@ class App extends Component {
   areParamsValid() {
     const state = this.state.params;
 
-    if((state.start_date.length &&
+    if((state.subscription_start_days.toString().length &&
         state.location.length &&
         state.max_distance.toString().length &&
         state.transmission.length &&
@@ -114,13 +114,13 @@ class App extends Component {
     const { name, value } = event.target;
     const params = this.state.params;
 
-    if(name === "max_distance" || "year") {
+    if(name === ("max_distance" || "year" || "subscription_start_days")) {
       params[name]= parseInt(value);
     }
 
-    // if(event.target.name === "tags"){
-    //   params[name]= [event.target.value];
-    // }
+    else if(name === "tags"){
+      params[name]= [value];
+    }
 
     else {
       params[name] = value;
@@ -180,9 +180,9 @@ class App extends Component {
 
     const keys = Object.keys(this.state.params);
     const values = Object.values(this.state.params);
-    const titles = ['Subscription Start', this.capitalize(keys[1]), 'Distance (radius in miles)', 'Vehicle Make', 'Monthly Budget', 'Gear Box', this.capitalize(keys[6]), this.capitalize(keys[7]).concat(' Type'), 'Car Type'];
+    const titles = ['Subscription starts within (days)', this.capitalize(keys[1]), 'Distance (radius in miles)', 'Vehicle Make', 'Monthly Budget', 'Gear Box', this.capitalize(keys[6]), this.capitalize(keys[7]).concat(' Type'), 'Car Type'];
     const placeholder = [null, 'Enter your location', null, null, null, null, null, null];
-    const type = ['text', 'text', 'number', 'text', null, 'text', 'number', 'text', 'text'];
+    const type = ['number', 'text', 'number', 'text', null, 'text', 'number', 'text', 'text'];
     const textInputs = [];
 
     for (let i = 0; i < 9; i++) {

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledInformation = styled.text `
+const StyledInformation = styled.span `
   font-color: #292b2c;
   font-size: 14px;
   font-weight: bolder;

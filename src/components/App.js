@@ -6,7 +6,7 @@ import Logo from './Logo';
 
 const API_URL = 'https://app.joindrover.com/api/web/vehicles';
 
-const columnStyle = { display: 'inline-block', width: '50%', 'vertical-align': 'top' };
+const columnStyle = { display: 'inline-block', width: '50%', 'verticalAlign': 'top' };
 
 class App extends Component {
   constructor() {

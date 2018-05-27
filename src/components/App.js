@@ -1,7 +1,6 @@
 import React, {Component} from "react";
-import TextInputBox from "./TextInputBox";
-import ScaleInputBox from './ScaleInputBox';
-import Results from './Results';
+import InputsHolder from './InputsHolder';
+import ResultsHolder from './ResultsHolder';
 import Logo from './Logo';
 
 const API_URL = 'https://app.joindrover.com/api/web/vehicles';
@@ -114,8 +113,8 @@ class App extends Component {
     const { name, value } = event.target;
     const params = this.state.params;
 
-    if(name === ("max_distance" || "year" || "subscription_start_days")) {
-      params[name]= parseInt(value);
+    if(name === ("max_distance") ) {
+      params[name]= parseInt(value, 10);
     }
 
     else if(name === "tags"){
@@ -137,92 +136,27 @@ class App extends Component {
     this.setState({params}, this.getData());
   }
 
-  // handleSelectChange(event) {
-  //   debugger;
-  //   console.log(event);
-  // }
-
-  capitalize(word) {
-    return word.charAt(0).toUpperCase() + word.substr(1);
-  }
-
   render() {
-    const {params, results, noResults} = this.state;
-    const resultsArray = [];
 
-    if (noResults === false && results.length < 1) {
-      return <span>Loading Cars...</span>
-    }
-
-    if(noResults === false){
-      const cap = results.length < 14 ? results.length : 14;
-
-      for (let i = 0; i < cap; i++) {
-        const image = results[i].images.find(i => i.position === 0);
-        const otherImages = results[i].images.sort((a, b) => a.position - b.position).slice(1, 4);
-
-        resultsArray.push(
-          <Results
-            vehicleMake={results[i].vehicle_make}
-            vehicleModel={results[i].vehicle_model}
-            postcode={results[i].postcode}
-            mainImage={image.main_image_url}
-
-            features={results[i].features} // only take a maximum of 4 features
-            fuel={results[i].fuel}
-            seats={results[i].number_seats_information}
-            engineSize={results[i].engine_size_information}
-            price={results[i].price_discount_and_deposit_schedule_hash[1].driver_price_pounds_after_discount_including_insurance}
+    return (
+      <div>
+        <div style={columnStyle}>
+          <Logo
+            title={"Drover"}/>
+          <form>
+            <InputsHolder
+              state={this.state}
+              scaleHandler={this.handleSlider}
+              textHandler={this.handleChange}
+            />
+          </form>
+        </div>
+        <div style={columnStyle}>
+          <ResultsHolder
+              state={this.state}
           />
-        )
-      }
-    }
-
-    const keys = Object.keys(this.state.params);
-    const values = Object.values(this.state.params);
-    const titles = ['Subscription starts within (days)', this.capitalize(keys[1]), 'Distance (radius in miles)', 'Vehicle Make', 'Monthly Budget', 'Gear Box', this.capitalize(keys[6]), this.capitalize(keys[7]).concat(' Type'), 'Car Type'];
-    const placeholder = [null, 'Enter your location', null, null, null, null, null, null];
-    const type = ['number', 'text', 'number', 'text', null, 'text', 'number', 'text', 'text'];
-    const textInputs = [];
-
-    for (let i = 0; i < 9; i++) {
-      if (i === 4) {
-        textInputs.push(
-          <ScaleInputBox
-            eventHandler={this.handleSlider}
-            title={titles[i]}
-            min={values[i]}
-            max={values[9]}
-          />
-        )
-      }
-      else (
-        textInputs.push(
-          <TextInputBox
-            eventHandler={this.handleChange}
-            name={keys[i]}
-            title={titles[i]}
-            value={values[i]}
-            type={type[i]}
-            placeholder={placeholder[i]}
-          />
-        )
-      )
-    }
-
-  return (
-    <div>
-      <div style={columnStyle}>
-        <Logo
-          title={"Drover"}/>
-        <form>
-          {textInputs}
-        </form>
+        </div>
       </div>
-      <div style={columnStyle}>
-        {resultsArray}
-      </div>
-    </div>
     )
   }
 }

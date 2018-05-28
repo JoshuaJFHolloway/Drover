@@ -113,7 +113,7 @@ class App extends Component {
     const { name, value } = event.target;
     const params = this.state.params;
 
-    if(name === ("max_distance") ) {
+    if((name === "max_distance") || (name === "year") || (name === "subscription_start_days")){
       params[name]= parseInt(value, 10);
     }
 

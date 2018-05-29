@@ -1,4 +1,5 @@
 import React from 'react';
+import CarHeaderStyle from './styledComponents/CarHeader';
 
 const ResultsHeader = (props) => {
 
@@ -6,8 +7,13 @@ const ResultsHeader = (props) => {
   const wrapperStyle = { width: 350 };
 
   return (
-    <div style={wrapperStyle}>
-      {`${props.vehicleMake} ${props.vehicleModel}`} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {`Located in ${shortenedPostcode}`}
+    <div>
+      <CarHeaderStyle style={wrapperStyle}>
+        {`${props.vehicleMake} ${props.vehicleModel}`}
+      </CarHeaderStyle>
+      <div>
+        {`Located in ${shortenedPostcode}`}
+      </div>
     </div>
   );
 };

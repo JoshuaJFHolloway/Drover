@@ -19,8 +19,8 @@ const ResultsHolder = (props) => {
 
         resultsArray.push(
           <Results
-            vehicleMake={results[i].vehicle_make}
-            vehicleModel={results[i].vehicle_model}
+            vehicleMake={props.capitalize(results[i].vehicle_make)}
+            vehicleModel={props.capitalize(results[i].vehicle_model)}
             postcode={results[i].postcode}
             mainImage={image.main_image_url}
 

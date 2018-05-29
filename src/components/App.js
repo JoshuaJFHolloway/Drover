@@ -136,6 +136,28 @@ class App extends Component {
     this.setState({params}, this.getData());
   }
 
+  capitalize(words) {
+    const splitUpWords = words.replace(/-/gi, ",-,").split(/[\s,]+/);
+    const arrayOfWords = [];
+
+    for (let i = 0; i < splitUpWords.length; i++) {
+      arrayOfWords.push(splitUpWords[i].charAt(0).toUpperCase() + splitUpWords[i].substr(1));
+    }
+
+    let combinedWords = arrayOfWords.join(" ");
+    const index = arrayOfWords.indexOf("-");
+    const addTogether = arrayOfWords[index - 1] + arrayOfWords[index] + arrayOfWords[index + 1];
+
+    arrayOfWords.splice(index -1 , 3, addTogether);
+
+    let capitalized = null;
+
+    splitUpWords.find(i => i === "-") ?
+      capitalized = (arrayOfWords.join(" ")) : capitalized = (combinedWords);
+
+    return capitalized;
+  }
+
   render() {
 
     return (
@@ -148,12 +170,14 @@ class App extends Component {
               state={this.state}
               scaleHandler={this.handleSlider}
               textHandler={this.handleChange}
+              capitalize={this.capitalize}
             />
           </form>
         </div>
         <div style={columnStyle}>
           <ResultsHolder
               state={this.state}
+              capitalize={this.capitalize}
           />
         </div>
       </div>

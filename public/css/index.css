@@ -10,3 +10,7 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+li {
+  list-style-type: none;
+  padding: 5px;
+}

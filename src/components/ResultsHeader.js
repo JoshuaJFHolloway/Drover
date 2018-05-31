@@ -4,7 +4,7 @@ import CarHeaderStyle from './styledComponents/CarHeader';
 const ResultsHeader = (props) => {
 
   const shortenedPostcode = props.postcode.slice(0, -3);
-  const wrapperStyle = { width: 350 };
+  const wrapperStyle = { width: 350, paddingTop: 20 };
 
   return (
     <div>

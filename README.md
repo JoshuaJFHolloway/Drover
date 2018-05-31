@@ -145,7 +145,7 @@ Below you can see a screenshot of the application once loaded. The left hand sid
 hand side updates accordingly. There is still a lot of formatting I would like to get done especially on the strings
 that accompany each image.
 
-<a href="https://ibb.co/gs3ZBJ"><img src="https://preview.ibb.co/eKT1rJ/Screen_Shot_2018_05_15_at_13_13_45.png" alt="Screen_Shot_2018_05_15_at_13_13_45" border="0"></a>
+<a href="https://ibb.co/kJDEtJ"><img src="https://preview.ibb.co/ibB0YJ/Screen_Shot_2018_05_31_at_15_22_17.png" alt="Screen_Shot_2018_05_31_at_15_22_17" border="0"></a>
 
 
 ## Contributors

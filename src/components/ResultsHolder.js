@@ -24,8 +24,8 @@ const ResultsHolder = (props) => {
             postcode={results[i].postcode}
             mainImage={image.main_image_url}
 
-            features={results[i].features} // only take a maximum of 4 features
-            fuel={results[i].fuel}
+            features={results[i].features.map(features => (props.capitalize(features)))} // only take a maximum of 4 features
+            fuel={props.capitalize(results[i].fuel)}
             seats={results[i].number_seats_information}
             engineSize={results[i].engine_size_information}
             price={results[i].price_discount_and_deposit_schedule_hash[1].driver_price_pounds_after_discount_including_insurance}

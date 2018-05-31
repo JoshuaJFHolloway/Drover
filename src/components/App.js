@@ -136,8 +136,18 @@ class App extends Component {
     this.setState({params}, this.getData());
   }
 
+  // replaceCharactersAndSplit(words) {
+  //   const replaceHyphens = words.replace(/-/gi, ",-,");
+  //   const replaceUnderscores = replaceHyphens.replace(/_/gi, " ");
+  //
+  //   return replaceUnderscores.replace(/Fmam/gi, "FM/AM").split(/[\s,]+/);
+  // }
+
   capitalize(words) {
-    const splitUpWords = words.replace(/-/gi, ",-,").split(/[\s,]+/);
+
+    const replaceHyphens = words.replace(/-/gi, ",-,");
+    const replaceUnderscores = replaceHyphens.replace(/_/gi, " ");
+    const splitUpWords = replaceUnderscores.replace(/Fmam/gi, "FM/AM").split(/[\s,]+/);
     const arrayOfWords = [];
 
     for (let i = 0; i < splitUpWords.length; i++) {

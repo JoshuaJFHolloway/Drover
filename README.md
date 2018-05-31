@@ -122,8 +122,8 @@ Apart from fixing the aforementioned bugs:
 
 2. Add the last few features that make up the page. For example the buttons. 
 
-3. Make the components more re-usable. I would have separated out some code more if I had the time. Take the
-   price outside of the header component etc. 
+3. ~~Make the components more re-usable. I would have separated out some code more if I had the time. Take the
+   price outside of the header component etc.~~ Done! 
 
 4. Add tests!! As testing was not the priority for this exercise I did not follow TDD. Which felt a bit
    strange. For me this exercise was to refine and explore API's further and I certainly did that and have 
@@ -142,8 +142,7 @@ Apart from fixing the aforementioned bugs:
 ## Screenshots of use!
 
 Below you can see a screenshot of the application once loaded. The left hand side are the spec inputs and the right
-hand side updates accordingly. There is still a lot of formatting I would like to get done especially on the strings
-that accompany each image.
+hand side updates accordingly.
 
 <a href="https://ibb.co/kJDEtJ"><img src="https://preview.ibb.co/ibB0YJ/Screen_Shot_2018_05_31_at_15_22_17.png" alt="Screen_Shot_2018_05_31_at_15_22_17" border="0"></a>
 

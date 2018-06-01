@@ -19,7 +19,7 @@ class App extends Component {
         vehicle_make: "Any",
         price_min :100,
         transmission: "Any",
-        year: "Any", // integer
+        year: new Date().getFullYear(), // integer
         fuel: "Any",
         tags: "Any", // array
         price_max: 2500,
@@ -147,8 +147,9 @@ class App extends Component {
 
     const replaceHyphens = words.replace(/-/gi, ",-,");
     const replaceUnderscores = replaceHyphens.replace(/_/gi, " ");
-    const splitUpWords = replaceUnderscores.replace(/Fmam/gi, "FM/AM").split(/[\s,]+/);
-    const arrayOfWords = [];
+    const replaceDab = replaceUnderscores.replace(/Dab/gi, "DAB");
+    const splitUpWords = replaceDab.replace(/Fmam/gi, "FM/AM").split(/[\s,]+/);
+    let arrayOfWords = [];
 
     for (let i = 0; i < splitUpWords.length; i++) {
       arrayOfWords.push(splitUpWords[i].charAt(0).toUpperCase() + splitUpWords[i].substr(1));

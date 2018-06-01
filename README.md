@@ -144,8 +144,7 @@ Apart from fixing the aforementioned bugs:
 Below you can see a screenshot of the application once loaded. The left hand side are the spec inputs and the right
 hand side updates accordingly.
 
-<a href="https://ibb.co/kJDEtJ"><img src="https://preview.ibb.co/ibB0YJ/Screen_Shot_2018_05_31_at_15_22_17.png" alt="Screen_Shot_2018_05_31_at_15_22_17" border="0"></a>
-
+<a href="https://ibb.co/cii02d"><img src="https://preview.ibb.co/gTDdoJ/Screen_Shot_2018_06_01_at_13_26_11.png" alt="Screen_Shot_2018_06_01_at_13_26_11" border="0"></a>
 
 ## Contributors
 

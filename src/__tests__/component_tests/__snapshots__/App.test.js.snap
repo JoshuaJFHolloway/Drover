@@ -1,0 +1,662 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          style={
+                    Object {
+                              "display": "inline-block",
+                              "verticalAlign": "top",
+                              "width": "50%",
+                            }
+          }
+>
+          <Logo
+                    title="Drover"
+          />
+          <form>
+                    <InputsHolder
+                              capitalize={[Function]}
+                              scaleHandler={[Function]}
+                              state={
+                                        Object {
+                                                  "noResults": false,
+                                                  "params": Object {
+                                                    "fuel": "Any",
+                                                    "location": "London, UK",
+                                                    "max_distance": 50,
+                                                    "number_of_months": 12,
+                                                    "number_of_weeks": 52,
+                                                    "order_by": "price",
+                                                    "order_direction": "asc",
+                                                    "page": 1,
+                                                    "per_page": 15,
+                                                    "price_max": 2500,
+                                                    "price_min": 100,
+                                                    "rolling": false,
+                                                    "subscription_start_days": 30,
+                                                    "tags": "Any",
+                                                    "transmission": "Any",
+                                                    "vehicle_make": "Any",
+                                                    "vehicle_type": "Consumer",
+                                                    "year": 2018,
+                                                  },
+                                                  "results": Array [],
+                                                }
+                              }
+                              textHandler={[Function]}
+                    />
+          </form>
+</div>,
+        <div
+          style={
+                    Object {
+                              "display": "inline-block",
+                              "verticalAlign": "top",
+                              "width": "50%",
+                            }
+          }
+>
+          <ResultsHolder
+                    capitalize={[Function]}
+                    state={
+                              Object {
+                                        "noResults": false,
+                                        "params": Object {
+                                          "fuel": "Any",
+                                          "location": "London, UK",
+                                          "max_distance": 50,
+                                          "number_of_months": 12,
+                                          "number_of_weeks": 52,
+                                          "order_by": "price",
+                                          "order_direction": "asc",
+                                          "page": 1,
+                                          "per_page": 15,
+                                          "price_max": 2500,
+                                          "price_min": 100,
+                                          "rolling": false,
+                                          "subscription_start_days": 30,
+                                          "tags": "Any",
+                                          "transmission": "Any",
+                                          "vehicle_make": "Any",
+                                          "vehicle_type": "Consumer",
+                                          "year": 2018,
+                                        },
+                                        "results": Array [],
+                                      }
+                    }
+          />
+</div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Logo
+              title="Drover"
+/>,
+            <form>
+              <InputsHolder
+                            capitalize={[Function]}
+                            scaleHandler={[Function]}
+                            state={
+                                          Object {
+                                                        "noResults": false,
+                                                        "params": Object {
+                                                          "fuel": "Any",
+                                                          "location": "London, UK",
+                                                          "max_distance": 50,
+                                                          "number_of_months": 12,
+                                                          "number_of_weeks": 52,
+                                                          "order_by": "price",
+                                                          "order_direction": "asc",
+                                                          "page": 1,
+                                                          "per_page": 15,
+                                                          "price_max": 2500,
+                                                          "price_min": 100,
+                                                          "rolling": false,
+                                                          "subscription_start_days": 30,
+                                                          "tags": "Any",
+                                                          "transmission": "Any",
+                                                          "vehicle_make": "Any",
+                                                          "vehicle_type": "Consumer",
+                                                          "year": 2018,
+                                                        },
+                                                        "results": Array [],
+                                                      }
+                            }
+                            textHandler={[Function]}
+              />
+</form>,
+          ],
+          "style": Object {
+            "display": "inline-block",
+            "verticalAlign": "top",
+            "width": "50%",
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "title": "Drover",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <InputsHolder
+                capitalize={[Function]}
+                scaleHandler={[Function]}
+                state={
+                                Object {
+                                                "noResults": false,
+                                                "params": Object {
+                                                  "fuel": "Any",
+                                                  "location": "London, UK",
+                                                  "max_distance": 50,
+                                                  "number_of_months": 12,
+                                                  "number_of_weeks": 52,
+                                                  "order_by": "price",
+                                                  "order_direction": "asc",
+                                                  "page": 1,
+                                                  "per_page": 15,
+                                                  "price_max": 2500,
+                                                  "price_min": 100,
+                                                  "rolling": false,
+                                                  "subscription_start_days": 30,
+                                                  "tags": "Any",
+                                                  "transmission": "Any",
+                                                  "vehicle_make": "Any",
+                                                  "vehicle_type": "Consumer",
+                                                  "year": 2018,
+                                                },
+                                                "results": Array [],
+                                              }
+                }
+                textHandler={[Function]}
+/>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "capitalize": [Function],
+                "scaleHandler": [Function],
+                "state": Object {
+                  "noResults": false,
+                  "params": Object {
+                    "fuel": "Any",
+                    "location": "London, UK",
+                    "max_distance": 50,
+                    "number_of_months": 12,
+                    "number_of_weeks": 52,
+                    "order_by": "price",
+                    "order_direction": "asc",
+                    "page": 1,
+                    "per_page": 15,
+                    "price_max": 2500,
+                    "price_min": 100,
+                    "rolling": false,
+                    "subscription_start_days": 30,
+                    "tags": "Any",
+                    "transmission": "Any",
+                    "vehicle_make": "Any",
+                    "vehicle_type": "Consumer",
+                    "year": 2018,
+                  },
+                  "results": Array [],
+                },
+                "textHandler": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": "form",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <ResultsHolder
+            capitalize={[Function]}
+            state={
+                        Object {
+                                    "noResults": false,
+                                    "params": Object {
+                                      "fuel": "Any",
+                                      "location": "London, UK",
+                                      "max_distance": 50,
+                                      "number_of_months": 12,
+                                      "number_of_weeks": 52,
+                                      "order_by": "price",
+                                      "order_direction": "asc",
+                                      "page": 1,
+                                      "per_page": 15,
+                                      "price_max": 2500,
+                                      "price_min": 100,
+                                      "rolling": false,
+                                      "subscription_start_days": 30,
+                                      "tags": "Any",
+                                      "transmission": "Any",
+                                      "vehicle_make": "Any",
+                                      "vehicle_type": "Consumer",
+                                      "year": 2018,
+                                    },
+                                    "results": Array [],
+                                  }
+            }
+/>,
+          "style": Object {
+            "display": "inline-block",
+            "verticalAlign": "top",
+            "width": "50%",
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "capitalize": [Function],
+            "state": Object {
+              "noResults": false,
+              "params": Object {
+                "fuel": "Any",
+                "location": "London, UK",
+                "max_distance": 50,
+                "number_of_months": 12,
+                "number_of_weeks": 52,
+                "order_by": "price",
+                "order_direction": "asc",
+                "page": 1,
+                "per_page": 15,
+                "price_max": 2500,
+                "price_min": 100,
+                "rolling": false,
+                "subscription_start_days": 30,
+                "tags": "Any",
+                "transmission": "Any",
+                "vehicle_make": "Any",
+                "vehicle_type": "Consumer",
+                "year": 2018,
+              },
+              "results": Array [],
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            style={
+                        Object {
+                                    "display": "inline-block",
+                                    "verticalAlign": "top",
+                                    "width": "50%",
+                                  }
+            }
+>
+            <Logo
+                        title="Drover"
+            />
+            <form>
+                        <InputsHolder
+                                    capitalize={[Function]}
+                                    scaleHandler={[Function]}
+                                    state={
+                                                Object {
+                                                            "noResults": false,
+                                                            "params": Object {
+                                                              "fuel": "Any",
+                                                              "location": "London, UK",
+                                                              "max_distance": 50,
+                                                              "number_of_months": 12,
+                                                              "number_of_weeks": 52,
+                                                              "order_by": "price",
+                                                              "order_direction": "asc",
+                                                              "page": 1,
+                                                              "per_page": 15,
+                                                              "price_max": 2500,
+                                                              "price_min": 100,
+                                                              "rolling": false,
+                                                              "subscription_start_days": 30,
+                                                              "tags": "Any",
+                                                              "transmission": "Any",
+                                                              "vehicle_make": "Any",
+                                                              "vehicle_type": "Consumer",
+                                                              "year": 2018,
+                                                            },
+                                                            "results": Array [],
+                                                          }
+                                    }
+                                    textHandler={[Function]}
+                        />
+            </form>
+</div>,
+          <div
+            style={
+                        Object {
+                                    "display": "inline-block",
+                                    "verticalAlign": "top",
+                                    "width": "50%",
+                                  }
+            }
+>
+            <ResultsHolder
+                        capitalize={[Function]}
+                        state={
+                                    Object {
+                                                "noResults": false,
+                                                "params": Object {
+                                                  "fuel": "Any",
+                                                  "location": "London, UK",
+                                                  "max_distance": 50,
+                                                  "number_of_months": 12,
+                                                  "number_of_weeks": 52,
+                                                  "order_by": "price",
+                                                  "order_direction": "asc",
+                                                  "page": 1,
+                                                  "per_page": 15,
+                                                  "price_max": 2500,
+                                                  "price_min": 100,
+                                                  "rolling": false,
+                                                  "subscription_start_days": 30,
+                                                  "tags": "Any",
+                                                  "transmission": "Any",
+                                                  "vehicle_make": "Any",
+                                                  "vehicle_type": "Consumer",
+                                                  "year": 2018,
+                                                },
+                                                "results": Array [],
+                                              }
+                        }
+            />
+</div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Logo
+                title="Drover"
+/>,
+              <form>
+                <InputsHolder
+                                capitalize={[Function]}
+                                scaleHandler={[Function]}
+                                state={
+                                                Object {
+                                                                "noResults": false,
+                                                                "params": Object {
+                                                                  "fuel": "Any",
+                                                                  "location": "London, UK",
+                                                                  "max_distance": 50,
+                                                                  "number_of_months": 12,
+                                                                  "number_of_weeks": 52,
+                                                                  "order_by": "price",
+                                                                  "order_direction": "asc",
+                                                                  "page": 1,
+                                                                  "per_page": 15,
+                                                                  "price_max": 2500,
+                                                                  "price_min": 100,
+                                                                  "rolling": false,
+                                                                  "subscription_start_days": 30,
+                                                                  "tags": "Any",
+                                                                  "transmission": "Any",
+                                                                  "vehicle_make": "Any",
+                                                                  "vehicle_type": "Consumer",
+                                                                  "year": 2018,
+                                                                },
+                                                                "results": Array [],
+                                                              }
+                                }
+                                textHandler={[Function]}
+                />
+</form>,
+            ],
+            "style": Object {
+              "display": "inline-block",
+              "verticalAlign": "top",
+              "width": "50%",
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "title": "Drover",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <InputsHolder
+                  capitalize={[Function]}
+                  scaleHandler={[Function]}
+                  state={
+                                    Object {
+                                                      "noResults": false,
+                                                      "params": Object {
+                                                        "fuel": "Any",
+                                                        "location": "London, UK",
+                                                        "max_distance": 50,
+                                                        "number_of_months": 12,
+                                                        "number_of_weeks": 52,
+                                                        "order_by": "price",
+                                                        "order_direction": "asc",
+                                                        "page": 1,
+                                                        "per_page": 15,
+                                                        "price_max": 2500,
+                                                        "price_min": 100,
+                                                        "rolling": false,
+                                                        "subscription_start_days": 30,
+                                                        "tags": "Any",
+                                                        "transmission": "Any",
+                                                        "vehicle_make": "Any",
+                                                        "vehicle_type": "Consumer",
+                                                        "year": 2018,
+                                                      },
+                                                      "results": Array [],
+                                                    }
+                  }
+                  textHandler={[Function]}
+/>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "capitalize": [Function],
+                  "scaleHandler": [Function],
+                  "state": Object {
+                    "noResults": false,
+                    "params": Object {
+                      "fuel": "Any",
+                      "location": "London, UK",
+                      "max_distance": 50,
+                      "number_of_months": 12,
+                      "number_of_weeks": 52,
+                      "order_by": "price",
+                      "order_direction": "asc",
+                      "page": 1,
+                      "per_page": 15,
+                      "price_max": 2500,
+                      "price_min": 100,
+                      "rolling": false,
+                      "subscription_start_days": 30,
+                      "tags": "Any",
+                      "transmission": "Any",
+                      "vehicle_make": "Any",
+                      "vehicle_type": "Consumer",
+                      "year": 2018,
+                    },
+                    "results": Array [],
+                  },
+                  "textHandler": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "form",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <ResultsHolder
+              capitalize={[Function]}
+              state={
+                            Object {
+                                          "noResults": false,
+                                          "params": Object {
+                                            "fuel": "Any",
+                                            "location": "London, UK",
+                                            "max_distance": 50,
+                                            "number_of_months": 12,
+                                            "number_of_weeks": 52,
+                                            "order_by": "price",
+                                            "order_direction": "asc",
+                                            "page": 1,
+                                            "per_page": 15,
+                                            "price_max": 2500,
+                                            "price_min": 100,
+                                            "rolling": false,
+                                            "subscription_start_days": 30,
+                                            "tags": "Any",
+                                            "transmission": "Any",
+                                            "vehicle_make": "Any",
+                                            "vehicle_type": "Consumer",
+                                            "year": 2018,
+                                          },
+                                          "results": Array [],
+                                        }
+              }
+/>,
+            "style": Object {
+              "display": "inline-block",
+              "verticalAlign": "top",
+              "width": "50%",
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "capitalize": [Function],
+              "state": Object {
+                "noResults": false,
+                "params": Object {
+                  "fuel": "Any",
+                  "location": "London, UK",
+                  "max_distance": 50,
+                  "number_of_months": 12,
+                  "number_of_weeks": 52,
+                  "order_by": "price",
+                  "order_direction": "asc",
+                  "page": 1,
+                  "per_page": 15,
+                  "price_max": 2500,
+                  "price_min": 100,
+                  "rolling": false,
+                  "subscription_start_days": 30,
+                  "tags": "Any",
+                  "transmission": "Any",
+                  "vehicle_make": "Any",
+                  "vehicle_type": "Consumer",
+                  "year": 2018,
+                },
+                "results": Array [],
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;

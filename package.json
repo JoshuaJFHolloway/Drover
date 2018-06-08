@@ -22,18 +22,14 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "nightwatch": "node_modules/.bin/nightwatch",
-    "e2e": "npm run launch-selenium",
-    "launch-selenium": "java -jar ./node_modules/selenium-server-standalone-jar/jar/selenium-server-standalone-3.9.1.jar",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
     "enzyme": "^3.3.0",
     "jest-cli": "^20.0.4",
+    "jest-fetch-mock": "^1.6.3",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-test-renderer": "^16.2.0",
-    "selenium-server-standalone-jar": "^3.4.0",
-    "selenium-standalone": "^6.13.0"
+    "react-test-renderer": "^16.2.0"
   }
 }

@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import InputsHolder from './InputsHolder';
 import ResultsHolder from './ResultsHolder';
 import Logo from './Logo';
+import {fetchData} from '../utils/fetchData';
 
 const columnStyle = { display: 'inline-block', width: '50%', 'verticalAlign': 'top' };
 

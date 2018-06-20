@@ -1,6 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from '../../components/App';
+import sinon from 'sinon';
+
+import * as fetchUtils from '../../utils/fetchData';
+import {dummyResponse} from '../mockData/response';
 
 const params = {
   subscription_start_days: 30,

@@ -73,36 +73,31 @@ class App extends Component {
     return body;
   }
 
+  onSuccess = (response) => {
+    console.log("onSuccess", response);
+    this.setState({
+      results: response.data
+    });
+
+    this.handleNoResults(!response.data.length);
+  };
+
+  onFailure = (err) => {
+    // TODO: handle error messaging
+    console.log("Something has gone wrong...");
+  };
+
   getData() {
     if (this.areParamsValid()) {
       const body = this.distill(this.state.params);
       console.log("Fetching Data");
 
-      const apiConfig = {
-        method: 'post',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(body)
-      };
-
-      fetch(API_URL, apiConfig)
-        .then(results => results.json())
-        .then(response => {
-          console.log(response);
-          this.setState({
-            results: response.data
-          });
-          if (response.data.length === 0) {
-            this.results(true)
-          }
-          else (this.results(false))
-        })
+      const request = JSON.stringify(body);
+      fetchData(request, this.onSuccess, this.onFailure);
     }
   }
 
-  results(areResultsPresent) {
+  handleNoResults(areResultsPresent) {
     this.setState({
       noResults: areResultsPresent,
     });

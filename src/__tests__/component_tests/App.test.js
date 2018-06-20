@@ -38,7 +38,18 @@ const handleChangeEvent = {
 const handleSliderEvent = [300, 2000];
 
 describe('App', () => {
-  let app = shallow(<App/>);
+  const app = shallow(<App/>);
+
+  let fetchStub;
+
+  beforeAll(() => {
+    fetchStub = sinon.stub(fetchUtils, "fetchData");
+    fetchStub.callsFake(((request, {onSuccess}) => onSuccess(dummyResponse)));
+  });
+
+  afterAll(() => {
+    fetchStub.restore();
+  });
 
   it('renders correctly', () => {
     expect(app).toMatchSnapshot();

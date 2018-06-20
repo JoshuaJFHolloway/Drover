@@ -3,8 +3,6 @@ import InputsHolder from './InputsHolder';
 import ResultsHolder from './ResultsHolder';
 import Logo from './Logo';
 
-const API_URL = 'https://app.joindrover.com/api/web/vehicles';
-
 const columnStyle = { display: 'inline-block', width: '50%', 'verticalAlign': 'top' };
 
 class App extends Component {

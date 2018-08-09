@@ -1,4 +1,4 @@
-# Drover Assignment
+# Drover
 
 **Disclaimer**
 
@@ -17,15 +17,15 @@ not be functional with the API then you know why.
 The page can be found at https://www.joindrover.com/cars/search and there are 2 versions of it (Consumer, Private-Hire) with very small differences between the two.
 
 
-**What did they expect from me?**
+**Specification**
 
 Using https://github.com/facebook/create-react-app as a boilerplate (or any other you might prefer) try and get as much done as possible.
 
-We know people have different amounts of time to do this test so we have broken it down into sections based on amount of time you have. Please try and do as much as possible but if you only have time for one section we understand, of course, the more you do the better an idea we have of your skills.
+People have different amounts of time to do this test so its is broken down into sections based on amount of time you have.
 
 **Basic**
 
-    - Setup an app that calls our API to get vehicles for one vehicle type
+    - Setup an app that calls to Drover API to get vehicles for one vehicle type
     - Display vehicles in a list/table to the user with relevant data (eg: make, model, year, color, price - see notes)
     - Allow at least 2 fields (location is required) in search to be user inputted (submit button? automatic?)
 
@@ -51,7 +51,7 @@ We know people have different amounts of time to do this test so we have broken 
 
 ## Tech Stack
 
-ReactJS
+ReactJS and Jest
 
 
 ## Installation

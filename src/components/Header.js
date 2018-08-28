@@ -6,11 +6,12 @@ const wrapperStyle = { width: 250 };
 const Header = (props) => {
   return (
     <div style={wrapperStyle}>
-      <Title>
-        {props.title}
-      </Title>
+        <span>Hello git conflict</span>
+        <span>{props}</span>
     </div>
   );
 };
 
 export default Header;
+
+// Hello this will cause a git conflict
